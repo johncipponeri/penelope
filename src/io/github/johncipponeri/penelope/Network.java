@@ -56,7 +56,7 @@ public abstract class Network extends Thread {
         }
     }
 
-    public abstract void parsePacket(byte[] data, InetAddress address, int port);
+    protected abstract void parsePacket(byte[] data, InetAddress address, int port);
 
     public void sendPacket(DatagramPacket packet) throws IOException {
         socket.send(packet);
